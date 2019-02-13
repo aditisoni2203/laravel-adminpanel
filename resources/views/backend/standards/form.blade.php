@@ -1,15 +1,21 @@
 <div class="box-body">
     <div class="form-group">
-        <!-- Create Your Field Label Here -->
-        <!-- Look Below Example for reference -->
          {{ Form::label('name', 'Name', ['class' => 'col-lg-2 control-label required']) }}
-
         <div class="col-lg-10">
-            <!-- Create Your Input Field Here -->
-            <!-- Look Below Example for reference -->
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => 'Name', 'required' => 'required']) }}
+
         </div><!--col-lg-10-->
     </div><!--form-group-->
+    <div class="form-group">
+            {{ Form::label('status', 'Status', ['class' => 'col-lg-2 control-label required']) }}
+         <div class="col-lg-10">
+           @if(isset($standards->status) && !empty ($standards->status))
+                {{ Form::checkbox('status', 1, true) }}
+            @else
+                {{ Form::checkbox('status', 1, false) }}
+            @endif
+        </div>
+    </div>
 </div><!--box-body-->
 
 @section("after-scripts")

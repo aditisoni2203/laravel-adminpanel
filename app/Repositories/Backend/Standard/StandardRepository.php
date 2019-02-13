@@ -30,6 +30,8 @@ class StandardRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.standards.table').'.id',
+                config('module.standards.table').'.name',
+                config('module.standards.table').'.status',
                 config('module.standards.table').'.created_at',
                 config('module.standards.table').'.updated_at',
             ]);
@@ -60,6 +62,7 @@ class StandardRepository extends BaseRepository
      */
     public function update(Standard $standard, array $input)
     {
+        $input['status'] = isset($input['status']) ? 1 : 0;
     	if ($standard->update($input))
             return true;
 

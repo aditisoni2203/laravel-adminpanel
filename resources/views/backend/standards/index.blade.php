@@ -22,12 +22,16 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.standards.table.id') }}</th>
+                            <th>Name</th>
+                            <th>Status</th>
                             <th>{{ trans('labels.backend.standards.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -55,6 +59,8 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.standards.table')}}.id'},
+                    {data: 'name', name: '{{config('module.standards.table')}}.name'},
+                    {data: 'status', name: '{{config('module.standards.table')}}.status'},
                     {data: 'created_at', name: '{{config('module.standards.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
