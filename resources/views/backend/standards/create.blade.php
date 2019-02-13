@@ -3,6 +3,7 @@
 @section ('title', trans('labels.backend.standards.management') . ' | ' . trans('labels.backend.standards.create'))
 
 @section('page-header')
+
     <h1>
         {{ trans('labels.backend.standards.management') }}
         <small>{{ trans('labels.backend.standards.create') }}</small>
