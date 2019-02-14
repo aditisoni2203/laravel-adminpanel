@@ -85,6 +85,13 @@ return [
 	"not_found" => "That Standard does not exist.",
 	"update_error" => "There was a problem updating this Standard. Please try again.",
 	],
+	"students" => [
+	"already_exists" => "That Student already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Student. Please try again.",
+	"delete_error" => "There was a problem deleting this Student. Please try again.",
+	"not_found" => "That Student does not exist.",
+	"update_error" => "There was a problem updating this Student. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

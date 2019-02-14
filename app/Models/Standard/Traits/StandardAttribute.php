@@ -22,4 +22,13 @@ trait StandardAttribute
                 '.$this->getDeleteButtonAttribute("delete-standard", "admin.standards.destroy").'
                 </div>';
     }
+
+    public function getStatusLabelAttribute()
+    {
+        if ($this->status == 1) {
+            return "<label class='label label-success'>".trans('labels.general.active').'</label>';
+        }
+
+        return "<label class='label label-danger'>".trans('labels.general.inactive').'</label>';
+    }
 }

@@ -23,4 +23,7 @@ return [
 	"standards" => [
 	"table" => "standards",
 	],
+	"students" => [
+	"table" => "students",
+	],
 ];

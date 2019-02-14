@@ -59,5 +59,10 @@ return [
 	"deleted" => "The Standard was successfully deleted.",
 	"updated" => "The Standard was successfully updated.",
 	],
+	"students" => [
+	"created" => "The Student was successfully created.",
+	"deleted" => "The Student was successfully deleted.",
+	"updated" => "The Student was successfully updated.",
+	],
 	],
 ];

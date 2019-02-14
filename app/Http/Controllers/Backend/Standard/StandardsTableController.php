@@ -41,6 +41,9 @@ class StandardsTableController extends Controller
             ->addColumn('created_at', function ($standard) {
                 return Carbon::parse($standard->created_at)->toDateString();
             })
+            ->addColumn('status', function ($standard) {
+                return $standard->status_label;
+            })
             ->addColumn('actions', function ($standard) {
                 return $standard->action_buttons;
             })

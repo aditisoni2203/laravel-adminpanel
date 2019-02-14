@@ -246,6 +246,22 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"students" => [
+	"create" => "Create Student",
+	"edit" => "Edit Student",
+	"management" => "Student Management",
+	"title" => "Students",
+	"table" => [
+	"id" => "Id",
+	"first_name" => "First Name",
+	"last_name" => "Last Name",
+	"gender" => "Gender",
+	"hobbies" => "Hobbies",
+	"profile_picture" => "Profile Picture",
+	"standard" => "Standard",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

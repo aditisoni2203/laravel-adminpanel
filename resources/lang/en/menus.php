@@ -107,6 +107,13 @@ return [
 	"management" => "Standard Management",
 	"main" => "Standards",
 	],
+	"students" => [
+	"all" => "All Students",
+	"create" => "Create Student",
+	"edit" => "Edit Student",
+	"management" => "Student Management",
+	"main" => "Students",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",
