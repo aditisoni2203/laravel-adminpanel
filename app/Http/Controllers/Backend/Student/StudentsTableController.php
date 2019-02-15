@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend\Student;
-
+use App\Models\Standard\Standard;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -39,7 +39,7 @@ class StudentsTableController extends Controller
         return Datatables::of($this->student->getForDataTable())
             ->escapeColumns(['id'])
             ->addColumn('standard', function ($student) {
-                return $student->standards->name;
+                return $student->standards['name'];
             })
             ->addColumn('created_at', function ($student) {
                 return Carbon::parse($student->created_at)->toDateString();

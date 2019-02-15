@@ -68,7 +68,7 @@ class StudentRepository extends BaseRepository
     {
         $input = $this->uploadImage($input);
         if (Student::create($input)) {
-            return true;
+            return $input;
         }
         throw new GeneralException(trans('exceptions.backend.students.create_error'));
     }
@@ -83,11 +83,14 @@ class StudentRepository extends BaseRepository
      */
     public function update(Student $student, array $input)
     {
+
         if (array_key_exists('profile_picture', $input)) {
             $this->deleteOldFile($student);
             $input = $this->uploadImage($input);
         }
+        
     	if ($student->update($input))
+
             return true;
 
         throw new GeneralException(trans('exceptions.backend.students.update_error'));
