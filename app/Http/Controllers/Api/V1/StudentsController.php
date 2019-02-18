@@ -80,12 +80,14 @@ class StudentsController extends APIController
      */
     public function update(Request $request, Student $student)
     {
+       // dd($request->all());
         $validation = $this->validateStudents($request, 'update');
 
         if ($validation->fails()) {
             return $this->throwValidation($validation->messages()->first());
         }
 
+        //dd($request);
         $this->repository->update($student, $request->all());
 
         $student = Student::findOrfail($student->id);
@@ -163,4 +165,9 @@ class StudentsController extends APIController
            // 'first_name.max'      => 'Students First Name may not be greater than 191 characters.',
         ];
     }
+
+    /*public function newupdate(Request $request, Student $student)
+    {
+        dd($request->all());
+    }*/
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
+use Illuminate\Support\Facades\Storage;
 
 class StudentsResource extends Resource
 {
@@ -17,8 +18,12 @@ class StudentsResource extends Resource
     {
         return [
             'first_name'    => $this['first_name'],
-            'last_name'            => $this['last_name'],
-            'image' => $this['profile_picture']
+            'last_name'     => $this['last_name'],
+            //'image'         => $this['profile_picture'],
+            'image'         => Storage::url("img/student/".$this['profile_picture']),
+            'gender'        => $this['gender'],
+            'hobbies'       => $this['hobbies'],
+            'standard'      => $this['standard'],
         ];
     }
 }

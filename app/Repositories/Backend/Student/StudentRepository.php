@@ -88,10 +88,10 @@ class StudentRepository extends BaseRepository
             $this->deleteOldFile($student);
             $input = $this->uploadImage($input);
         }
-        
+       // dd($input);exit;
     	if ($student->update($input))
 
-            return true;
+            return $input;
 
         throw new GeneralException(trans('exceptions.backend.students.update_error'));
     }

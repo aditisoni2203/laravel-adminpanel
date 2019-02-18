@@ -58,5 +58,8 @@ Route::group(['namespace' => 'Api\V1', 'prefix' => 'v1', 'as' => 'v1.'], functio
 
         //Student
         Route::resource('students', 'StudentsController', ['except' => ['create', 'edit']]);
+
+        //Route::post('studentupdate/{student}/edit','StudentsController@newupdate');
     });
+
 });
